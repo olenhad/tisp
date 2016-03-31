@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		90C24BB91CAD76C100625594 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90C24BB81CAD76C100625594 /* main.mm */; };
+		90C24BC11CAD77B900625594 /* OIExpr.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90C24BC01CAD77B900625594 /* OIExpr.mm */; };
+		90C24BFE1CAD7E4E00625594 /* OIContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90C24BFD1CAD7E4E00625594 /* OIContext.mm */; };
+		90C24C041CAD9DF500625594 /* libLLVMCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C24C021CAD9DF500625594 /* libLLVMCore.a */; };
+		90C24C051CAD9DF500625594 /* libLLVMSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C24C031CAD9DF500625594 /* libLLVMSupport.a */; };
+		90C24C071CAD9EB700625594 /* libcurses.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C24C061CAD9EB700625594 /* libcurses.tbd */; };
+		90C24C0A1CADA0A300625594 /* OITokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C24C091CADA0A300625594 /* OITokenizer.m */; };
+		90C24C0F1CADAE2000625594 /* NSObject+GCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C24C0E1CADAE2000625594 /* NSObject+GCAdditions.m */; };
+		90C24C121CADAFA500625594 /* OIParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90C24C111CADAFA500625594 /* OIParser.mm */; };
+		90C24C151CADB21000625594 /* NSArray+OIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C24C141CADB21000625594 /* NSArray+OIAdditions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		90C24BB31CAD76C100625594 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		90C24BB51CAD76C100625594 /* tisp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tisp; sourceTree = BUILT_PRODUCTS_DIR; };
+		90C24BB81CAD76C100625594 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		90C24BBF1CAD77B900625594 /* OIExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OIExpr.h; sourceTree = "<group>"; };
+		90C24BC01CAD77B900625594 /* OIExpr.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OIExpr.mm; sourceTree = "<group>"; };
+		90C24BFC1CAD7E4E00625594 /* OIContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OIContext.h; sourceTree = "<group>"; };
+		90C24BFD1CAD7E4E00625594 /* OIContext.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OIContext.mm; sourceTree = "<group>"; };
+		90C24C021CAD9DF500625594 /* libLLVMCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLLVMCore.a; sourceTree = "<group>"; };
+		90C24C031CAD9DF500625594 /* libLLVMSupport.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLLVMSupport.a; sourceTree = "<group>"; };
+		90C24C061CAD9EB700625594 /* libcurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurses.tbd; path = usr/lib/libcurses.tbd; sourceTree = SDKROOT; };
+		90C24C081CADA0A300625594 /* OITokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITokenizer.h; sourceTree = "<group>"; };
+		90C24C091CADA0A300625594 /* OITokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITokenizer.m; sourceTree = "<group>"; };
+		90C24C0D1CADAE2000625594 /* NSObject+GCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCAdditions.h"; sourceTree = "<group>"; };
+		90C24C0E1CADAE2000625594 /* NSObject+GCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GCAdditions.m"; sourceTree = "<group>"; };
+		90C24C101CADAFA500625594 /* OIParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OIParser.h; sourceTree = "<group>"; };
+		90C24C111CADAFA500625594 /* OIParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OIParser.mm; sourceTree = "<group>"; };
+		90C24C131CADB21000625594 /* NSArray+OIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+OIAdditions.h"; sourceTree = "<group>"; };
+		90C24C141CADB21000625594 /* NSArray+OIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+OIAdditions.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90C24BB21CAD76C100625594 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90C24C071CAD9EB700625594 /* libcurses.tbd in Frameworks */,
+				90C24C051CAD9DF500625594 /* libLLVMSupport.a in Frameworks */,
+				90C24C041CAD9DF500625594 /* libLLVMCore.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90C24BAC1CAD76C100625594 = {
+			isa = PBXGroup;
+			children = (
+				90C24C061CAD9EB700625594 /* libcurses.tbd */,
+				90C24C011CAD9D8E00625594 /* libs */,
+				90C24BB71CAD76C100625594 /* tisp */,
+				90C24BB61CAD76C100625594 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		90C24BB61CAD76C100625594 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90C24BB51CAD76C100625594 /* tisp */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90C24BB71CAD76C100625594 /* tisp */ = {
+			isa = PBXGroup;
+			children = (
+				90C24BB81CAD76C100625594 /* main.mm */,
+				90C24BBF1CAD77B900625594 /* OIExpr.h */,
+				90C24BC01CAD77B900625594 /* OIExpr.mm */,
+				90C24BFC1CAD7E4E00625594 /* OIContext.h */,
+				90C24BFD1CAD7E4E00625594 /* OIContext.mm */,
+				90C24C081CADA0A300625594 /* OITokenizer.h */,
+				90C24C091CADA0A300625594 /* OITokenizer.m */,
+				90C24C101CADAFA500625594 /* OIParser.h */,
+				90C24C111CADAFA500625594 /* OIParser.mm */,
+				90C24C0D1CADAE2000625594 /* NSObject+GCAdditions.h */,
+				90C24C0E1CADAE2000625594 /* NSObject+GCAdditions.m */,
+				90C24C131CADB21000625594 /* NSArray+OIAdditions.h */,
+				90C24C141CADB21000625594 /* NSArray+OIAdditions.m */,
+			);
+			path = tisp;
+			sourceTree = "<group>";
+		};
+		90C24C011CAD9D8E00625594 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				90C24C021CAD9DF500625594 /* libLLVMCore.a */,
+				90C24C031CAD9DF500625594 /* libLLVMSupport.a */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90C24BB41CAD76C100625594 /* tisp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90C24BBC1CAD76C100625594 /* Build configuration list for PBXNativeTarget "tisp" */;
+			buildPhases = (
+				90C24BB11CAD76C100625594 /* Sources */,
+				90C24BB21CAD76C100625594 /* Frameworks */,
+				90C24BB31CAD76C100625594 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tisp;
+			productName = tisp;
+			productReference = 90C24BB51CAD76C100625594 /* tisp */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90C24BAD1CAD76C100625594 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Garena;
+				TargetAttributes = {
+					90C24BB41CAD76C100625594 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 90C24BB01CAD76C100625594 /* Build configuration list for PBXProject "tisp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 90C24BAC1CAD76C100625594;
+			productRefGroup = 90C24BB61CAD76C100625594 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90C24BB41CAD76C100625594 /* tisp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90C24BB11CAD76C100625594 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90C24C151CADB21000625594 /* NSArray+OIAdditions.m in Sources */,
+				90C24C121CADAFA500625594 /* OIParser.mm in Sources */,
+				90C24BC11CAD77B900625594 /* OIExpr.mm in Sources */,
+				90C24BFE1CAD7E4E00625594 /* OIContext.mm in Sources */,
+				90C24BB91CAD76C100625594 /* main.mm in Sources */,
+				90C24C0A1CADA0A300625594 /* OITokenizer.m in Sources */,
+				90C24C0F1CADAE2000625594 /* NSObject+GCAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		90C24BBA1CAD76C100625594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/llvm/3.5.0/include/;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		90C24BBB1CAD76C100625594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/llvm/3.5.0/include/;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		90C24BBD1CAD76C100625594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					__STDC_CONSTANT_MACROS,
+					__STDC_FORMAT_MACROS,
+					__STDC_LIMIT_MACROS,
+				);
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/llvm/3.5.0/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/tisp.xcodeproj",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		90C24BBE1CAD76C100625594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					__STDC_CONSTANT_MACROS,
+					__STDC_FORMAT_MACROS,
+					__STDC_LIMIT_MACROS,
+				);
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/llvm/3.5.0/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/tisp.xcodeproj",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90C24BB01CAD76C100625594 /* Build configuration list for PBXProject "tisp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90C24BBA1CAD76C100625594 /* Debug */,
+				90C24BBB1CAD76C100625594 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90C24BBC1CAD76C100625594 /* Build configuration list for PBXNativeTarget "tisp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90C24BBD1CAD76C100625594 /* Debug */,
+				90C24BBE1CAD76C100625594 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90C24BAD1CAD76C100625594 /* Project object */;
+}
