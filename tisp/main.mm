@@ -6,7 +6,11 @@
 //  Copyright © 2016 Garena. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+//#import "TispJIT.hpp"
+
+
+#import "JITHelper.h"
+
 #import "OIContext.h"
 
 #import "OITokenizer.h"
@@ -16,20 +20,20 @@
 
 #import <iostream>
 
+
+#import <Foundation/Foundation.h>
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        NSLog(@"Hello, World!");
-        
-        NSString *func = @"(defn add (a b) (+ a b))";
-        NSArray *t1 = [OITokenizer tokenize:func];
-        NSLog(@"Tokens: %@", t1);
 
-        OIParserResult *p1 = [OIParser parseFromTokens:t1];
-        NSLog(@"%@", p1);
+        llvm::InitializeNativeTarget();
+        llvm::InitializeNativeTargetAsmPrinter();
+        llvm::InitializeNativeTargetAsmParser();
         
         OIContext *context = [OIContext new];
-        context->module = new llvm::Module ("tisp", llvm::getGlobalContext());
+
+        context->JITHelper = new MCJITHelper(llvm::getGlobalContext());
         
         while (YES) {
             std::cout << "tisp>";
@@ -42,17 +46,28 @@ int main(int argc, const char * argv[]) {
             }
             
             NSArray *tokens = [OITokenizer tokenize:nsLine];
-            NSLog(@"Tokens: %@", tokens);
             
             OIParserResult *parseResult = [OIParser parseFromTokens:tokens];
             NSLog(@"Parse Result: %@", parseResult);
             
             if (parseResult) {
+                
                 OIExpr *expr = (OIExpr *)parseResult.expr;
+                llvm::Value *value = [expr codegenWithContext:context];
                 
-                llvm::Value *IR = [expr codegenWithContext:context];
+                // print IR
+                value->dump();
                 
-                IR->dump();
+                
+//                
+//                // JIT the function, returning a function pointer.
+//                void *FPtr = context->JITHelper->getPointerToFunction(function);
+//                
+//                // Cast it to the right type (takes no arguments, returns a double) so we
+//                // can call it as a native function.
+//                double (*FP)() = (double (*)())(intptr_t)FPtr;
+//                fprintf(stderr, "Evaluated to %f\n", FP());
+            
             }
 
         }
@@ -60,3 +75,4 @@ int main(int argc, const char * argv[]) {
     }
     return 0;
 }
+

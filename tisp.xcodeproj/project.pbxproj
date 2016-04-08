@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9056E25A1CAE5425008DA533 /* libLLVMCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9056E2581CAE5425008DA533 /* libLLVMCore.a */; };
-		9056E25B1CAE5425008DA533 /* libLLVMSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9056E2591CAE5425008DA533 /* libLLVMSupport.a */; };
+		90BAE2CB1CB7017B00490CE0 /* JITHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90BAE2C81CB6F8A800490CE0 /* JITHelper.cpp */; };
+		90BAE2CC1CB7018A00490CE0 /* JITHelper.h in Sources */ = {isa = PBXBuildFile; fileRef = 90BAE2C91CB6F8A800490CE0 /* JITHelper.h */; };
 		90C24BB91CAD76C100625594 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90C24BB81CAD76C100625594 /* main.mm */; };
 		90C24BC11CAD77B900625594 /* OIExpr.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90C24BC01CAD77B900625594 /* OIExpr.mm */; };
 		90C24BFE1CAD7E4E00625594 /* OIContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90C24BFD1CAD7E4E00625594 /* OIContext.mm */; };
-		90C24C071CAD9EB700625594 /* libcurses.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C24C061CAD9EB700625594 /* libcurses.tbd */; };
 		90C24C0A1CADA0A300625594 /* OITokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C24C091CADA0A300625594 /* OITokenizer.m */; };
 		90C24C0F1CADAE2000625594 /* NSObject+GCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C24C0E1CADAE2000625594 /* NSObject+GCAdditions.m */; };
 		90C24C121CADAFA500625594 /* OIParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90C24C111CADAFA500625594 /* OIParser.mm */; };
@@ -32,15 +31,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9056E2581CAE5425008DA533 /* libLLVMCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLLVMCore.a; path = lib/libLLVMCore.a; sourceTree = "<group>"; };
-		9056E2591CAE5425008DA533 /* libLLVMSupport.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLLVMSupport.a; path = lib/libLLVMSupport.a; sourceTree = "<group>"; };
+		90BAE2C81CB6F8A800490CE0 /* JITHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JITHelper.cpp; sourceTree = "<group>"; };
+		90BAE2C91CB6F8A800490CE0 /* JITHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JITHelper.h; sourceTree = "<group>"; };
 		90C24BB51CAD76C100625594 /* tisp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tisp; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C24BB81CAD76C100625594 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		90C24BBF1CAD77B900625594 /* OIExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OIExpr.h; sourceTree = "<group>"; };
 		90C24BC01CAD77B900625594 /* OIExpr.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OIExpr.mm; sourceTree = "<group>"; };
 		90C24BFC1CAD7E4E00625594 /* OIContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OIContext.h; sourceTree = "<group>"; };
 		90C24BFD1CAD7E4E00625594 /* OIContext.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OIContext.mm; sourceTree = "<group>"; };
-		90C24C061CAD9EB700625594 /* libcurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurses.tbd; path = usr/lib/libcurses.tbd; sourceTree = SDKROOT; };
 		90C24C081CADA0A300625594 /* OITokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OITokenizer.h; sourceTree = "<group>"; };
 		90C24C091CADA0A300625594 /* OITokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OITokenizer.m; sourceTree = "<group>"; };
 		90C24C0D1CADAE2000625594 /* NSObject+GCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GCAdditions.h"; sourceTree = "<group>"; };
@@ -56,9 +54,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90C24C071CAD9EB700625594 /* libcurses.tbd in Frameworks */,
-				9056E25B1CAE5425008DA533 /* libLLVMSupport.a in Frameworks */,
-				9056E25A1CAE5425008DA533 /* libLLVMCore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +63,6 @@
 		90C24BAC1CAD76C100625594 = {
 			isa = PBXGroup;
 			children = (
-				90C24C061CAD9EB700625594 /* libcurses.tbd */,
 				90C24C011CAD9D8E00625594 /* libs */,
 				90C24BB71CAD76C100625594 /* tisp */,
 				90C24BB61CAD76C100625594 /* Products */,
@@ -99,6 +93,8 @@
 				90C24C0E1CADAE2000625594 /* NSObject+GCAdditions.m */,
 				90C24C131CADB21000625594 /* NSArray+OIAdditions.h */,
 				90C24C141CADB21000625594 /* NSArray+OIAdditions.m */,
+				90BAE2C81CB6F8A800490CE0 /* JITHelper.cpp */,
+				90BAE2C91CB6F8A800490CE0 /* JITHelper.h */,
 			);
 			path = tisp;
 			sourceTree = "<group>";
@@ -106,8 +102,6 @@
 		90C24C011CAD9D8E00625594 /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				9056E2581CAE5425008DA533 /* libLLVMCore.a */,
-				9056E2591CAE5425008DA533 /* libLLVMSupport.a */,
 			);
 			name = libs;
 			sourceTree = "<group>";
@@ -122,6 +116,7 @@
 				90C24BB11CAD76C100625594 /* Sources */,
 				90C24BB21CAD76C100625594 /* Frameworks */,
 				90C24BB31CAD76C100625594 /* CopyFiles */,
+				90A021EC1CB7995800F52582 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -163,11 +158,29 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		90A021EC1CB7995800F52582 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		90C24BB11CAD76C100625594 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90BAE2CC1CB7018A00490CE0 /* JITHelper.h in Sources */,
+				90BAE2CB1CB7017B00490CE0 /* JITHelper.cpp in Sources */,
 				90C24C151CADB21000625594 /* NSArray+OIAdditions.m in Sources */,
 				90C24C121CADAFA500625594 /* OIParser.mm in Sources */,
 				90C24BC11CAD77B900625594 /* OIExpr.mm in Sources */,
@@ -271,14 +284,51 @@
 					__STDC_FORMAT_MACROS,
 					__STDC_LIMIT_MACROS,
 				);
-				HEADER_SEARCH_PATHS = /usr/local/Cellar/llvm/3.5.0/include;
+				HEADER_SEARCH_PATHS = "/opt/local/libexec/llvm-3.7/include";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/tisp.xcodeproj",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/lib",
+					"/opt/local/libexec/llvm-3.7/lib",
 				);
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = (
+					"-lLLVMX86Disassembler",
+					"-lLLVMX86AsmParser",
+					"-lLLVMX86CodeGen",
+					"-lLLVMSelectionDAG",
+					"-lLLVMAsmPrinter",
+					"-lLLVMCodeGen",
+					"-lLLVMScalarOpts",
+					"-lLLVMProfileData",
+					"-lLLVMInstCombine",
+					"-lLLVMInstrumentation",
+					"-lLLVMTransformUtils",
+					"-lLLVMipa",
+					"-lLLVMX86Desc",
+					"-lLLVMMCDisassembler",
+					"-lLLVMX86Info",
+					"-lLLVMX86AsmPrinter",
+					"-lLLVMX86Utils",
+					"-lLLVMMCJIT",
+					"-lLLVMExecutionEngine",
+					"-lLLVMTarget",
+					"-lLLVMAnalysis",
+					"-lLLVMRuntimeDyld",
+					"-lLLVMObject",
+					"-lLLVMMCParser",
+					"-lLLVMBitReader",
+					"-lLLVMMC",
+					"-lLLVMCore",
+					"-lLLVMSupport",
+					"-lz",
+					"-lpthread",
+					"-lffi",
+					"-ledit",
+					"-lcurses",
+					"-lm",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -292,14 +342,51 @@
 					__STDC_FORMAT_MACROS,
 					__STDC_LIMIT_MACROS,
 				);
-				HEADER_SEARCH_PATHS = /usr/local/Cellar/llvm/3.5.0/include;
+				HEADER_SEARCH_PATHS = "/opt/local/libexec/llvm-3.7/include";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/tisp.xcodeproj",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/lib",
+					"/opt/local/libexec/llvm-3.7/lib",
 				);
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = (
+					"-lLLVMX86Disassembler",
+					"-lLLVMX86AsmParser",
+					"-lLLVMX86CodeGen",
+					"-lLLVMSelectionDAG",
+					"-lLLVMAsmPrinter",
+					"-lLLVMCodeGen",
+					"-lLLVMScalarOpts",
+					"-lLLVMProfileData",
+					"-lLLVMInstCombine",
+					"-lLLVMInstrumentation",
+					"-lLLVMTransformUtils",
+					"-lLLVMipa",
+					"-lLLVMX86Desc",
+					"-lLLVMMCDisassembler",
+					"-lLLVMX86Info",
+					"-lLLVMX86AsmPrinter",
+					"-lLLVMX86Utils",
+					"-lLLVMMCJIT",
+					"-lLLVMExecutionEngine",
+					"-lLLVMTarget",
+					"-lLLVMAnalysis",
+					"-lLLVMRuntimeDyld",
+					"-lLLVMObject",
+					"-lLLVMMCParser",
+					"-lLLVMBitReader",
+					"-lLLVMMC",
+					"-lLLVMCore",
+					"-lLLVMSupport",
+					"-lz",
+					"-lpthread",
+					"-lffi",
+					"-ledit",
+					"-lcurses",
+					"-lm",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

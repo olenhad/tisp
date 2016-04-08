@@ -13,7 +13,7 @@
 
 @interface OIParserResult : NSObject
 
-@property (nonatomic, copy) NSArray *tokensRemaining;
+@property (nonatomic, copy) NSArray<OIToken *> *tokensRemaining;
 @property (nonatomic, strong) id<OIParseable> expr;
 
 @end
@@ -21,5 +21,7 @@
 @interface OIParser : NSObject
 
 + (OIParserResult *)parseFromTokens:(NSArray<OIToken *> *)tokens;
+
++ (OIParserResult *)parseTopLevelFromTokens:(NSArray<OIToken *> *)tokens;
 
 @end

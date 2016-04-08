@@ -50,7 +50,12 @@
             continue;
         }
         
-        if (currentChar == '+' || currentChar == '*' || currentChar == '-' || currentChar == '<') {
+        if (currentChar == '+' || 
+            currentChar == '*' || 
+            currentChar == '-' || 
+            currentChar == '<' || 
+            currentChar == '>' || 
+            currentChar == '=') {
             [tokens addObject:[OIToken type:OITokenTypeOp val:[NSString stringWithFormat:@"%C", currentChar]]];
             
             current++;

@@ -28,6 +28,19 @@
 
 @implementation OIParser
 
++ (OIParserResult *)parseTopLevelFromTokens:(NSArray<OIToken *> *)tokens {
+    OIParserResult *result = [self parseFromTokens:tokens];
+    if (!result) {
+        return nil;
+    }
+    
+    // Make an anon proto
+    OIPrototypeExpr *proto = [OIPrototypeExpr name:@"" args:@[]];
+    OIFunctionExpr *topLevel = [OIFunctionExpr proto:proto body:result.expr];
+    
+    return [OIParserResult res:topLevel rem:result.tokensRemaining];
+}
+
 + (OIParserResult *)parseFromTokens:(NSArray<OIToken *> *)tokens {
     OIToken *first = [tokens firstObject];
     if (first == nil) {
@@ -57,6 +70,9 @@
         if (next.type == OITokenTypeName) {
             if ([next.val isEqualToString:@"defn"]) {
                 return [self parseFunctionFromTokens:[[tokens rest] rest]];
+            }
+            if ([next.val isEqualToString:@"if"]) {
+                return [self parseIfFromTokens:[tokens rest]];
             }
             return [self parseCallFromTokens:[tokens rest]];
         }
@@ -161,6 +177,37 @@
     }
     
     return [OIParserResult res:[OICallExpr name:first.val args:exprs] rem:[remaining rest]];
+}
+
++ (OIParserResult *)parseIfFromTokens:(NSArray<OIToken *> *)tokens {
+    OIToken *first = [tokens firstObject];
+    if (!(first.type == OITokenTypeName && [first.val isEqualToString:@"if"])) {
+        NSLog(@"Expected if");
+        return nil;
+    }
+    
+    OIParserResult *cond = [self parseFromTokens:tokens.rest];
+    if (!cond) {
+        return nil;
+    }
+    
+    OIParserResult *then = [self parseFromTokens:cond.tokensRemaining];
+    if (!then) {
+        return nil;
+    }
+    
+    OIParserResult *elseE = [self parseFromTokens:then.tokensRemaining];
+    if (!elseE) {
+        return nil;
+    }
+    
+    if (!(elseE.tokensRemaining.firstObject.type == OITokenTypeParen && [elseE.tokensRemaining.firstObject.val isEqualToString:@")"])) {
+        return nil;
+    }
+    
+    OIIfExpr *expr = [OIIfExpr cond:cond.expr then:then.expr elseE:elseE.expr];
+    
+    return [OIParserResult res:expr rem:elseE.tokensRemaining.rest];
 }
 
 @end

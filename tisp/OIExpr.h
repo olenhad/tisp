@@ -6,9 +6,11 @@
 //  Copyright © 2016 Garena. All rights reserved.
 //
 
+#import "OIContext.h"
+
 #import <Foundation/Foundation.h>
 #import <llvm/IR/Value.h>
-#import "OIContext.h"
+
 
 @protocol OIParseable <NSObject>
 
@@ -67,11 +69,22 @@
 
 @end
 
-@interface OIFunctionExpr : OIExpr
+@interface OIFunctionExpr : NSObject <OIParseable>
 
 @property (nonatomic, strong, readonly) OIPrototypeExpr *proto;
 @property (nonatomic, strong, readonly) OIExpr *body;
 
 + (instancetype)proto:(OIPrototypeExpr *)proto body:(OIExpr *)body;
+
+- (llvm::Function *)codegenWithContext:(OIContext *)ctx;
+
+@end
+
+@interface OIIfExpr : OIExpr
+@property (nonatomic, strong, readonly) OIExpr *cond;
+@property (nonatomic, strong, readonly) OIExpr *thenE;
+@property (nonatomic, strong, readonly) OIExpr *elseE;
+
++ (instancetype)cond:(OIExpr *)cond then:(OIExpr *)then elseE:(OIExpr *)elseE;
 
 @end
