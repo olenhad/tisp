@@ -28,6 +28,10 @@
 //    return [self gc_recursiveDescription];
 //}
 
+- (BOOL)isTopLevel {
+    return YES;
+}
+
 @end
 
 @implementation OINumberExpr
@@ -233,6 +237,10 @@
     return function;
 }
 
+- (BOOL)isTopLevel {
+    return NO;
+}
+
 //- (NSString *)description {
 //    return [self gc_recursiveDescription];
 //}
@@ -254,19 +262,9 @@
 }
 
 - (llvm::Function *)codegenWithContext:(OIContext *)ctx {
-    // First, check for an existing function from a previous 'extern' declaration.
-    llvm::Function *function = ctx->JITHelper->getFunction(std::string([self.proto.name UTF8String]));
+    llvm::Function *function = [self.proto codegenWithContext:ctx];
     
     if (!function) {
-        function = [self.proto codegenWithContext:ctx];
-    }
-    
-    if (!function) {
-        return nil;
-    }
-    
-    if (!function->empty()) {
-        NSLog(@"Function cannot be redefined");
         return nil;
     }
     
@@ -288,6 +286,10 @@
     
     function->eraseFromParent();
     return nil;
+}
+
+- (BOOL)isTopLevel {
+    return NO;
 }
 
 @end

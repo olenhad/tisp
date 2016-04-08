@@ -31,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		90A021ED1CB7A4BA00F52582 /* fib.tisp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fib.tisp; path = examples/fib.tisp; sourceTree = "<group>"; };
 		90BAE2C81CB6F8A800490CE0 /* JITHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JITHelper.cpp; sourceTree = "<group>"; };
 		90BAE2C91CB6F8A800490CE0 /* JITHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JITHelper.h; sourceTree = "<group>"; };
 		90C24BB51CAD76C100625594 /* tisp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tisp; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +64,7 @@
 		90C24BAC1CAD76C100625594 = {
 			isa = PBXGroup;
 			children = (
+				90A021ED1CB7A4BA00F52582 /* fib.tisp */,
 				90C24C011CAD9D8E00625594 /* libs */,
 				90C24BB71CAD76C100625594 /* tisp */,
 				90C24BB61CAD76C100625594 /* Products */,

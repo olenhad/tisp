@@ -50,15 +50,30 @@ int main(int argc, const char * argv[]) {
             OIParserResult *parseResult = [OIParser parseFromTokens:tokens];
             NSLog(@"Parse Result: %@", parseResult);
             
-            if (parseResult) {
+            if (parseResult && ![parseResult.expr isTopLevel]) {
                 
                 OIExpr *expr = (OIExpr *)parseResult.expr;
                 llvm::Value *value = [expr codegenWithContext:context];
                 
-                // print IR
                 value->dump();
                 
+
+            
+            } else if (parseResult && [parseResult.expr isTopLevel]) {
                 
+                NSLog(@"Top Level:...");
+                
+                OIExpr *expr = (OIExpr *)parseResult.expr;
+                llvm::Value *value = [expr codegenWithContext:context];
+                
+                value->dump();
+//                // Make an anon proto
+//                OIPrototypeExpr *proto = [OIPrototypeExpr name:@"" args:@[]];
+//                OIFunctionExpr *topLevel = [OIFunctionExpr proto:proto body:parseResult.expr];
+//                
+//                llvm::Function *function = [topLevel codegenWithContext:context];
+//                
+//                function->dump();
 //                
 //                // JIT the function, returning a function pointer.
 //                void *FPtr = context->JITHelper->getPointerToFunction(function);
@@ -67,7 +82,6 @@ int main(int argc, const char * argv[]) {
 //                // can call it as a native function.
 //                double (*FP)() = (double (*)())(intptr_t)FPtr;
 //                fprintf(stderr, "Evaluated to %f\n", FP());
-            
             }
 
         }

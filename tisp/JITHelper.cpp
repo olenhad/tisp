@@ -160,6 +160,8 @@ void *MCJITHelper::getPointerToFunction(Function *F) {
         
         OpenModule = NULL;
         Engines.push_back(NewEngine);
+        
+        //Calls getSymbolAddress() mysteriously after first call
         NewEngine->finalizeObject();
         return NewEngine->getPointerToFunction(F);
     }

@@ -14,6 +14,8 @@
 
 @protocol OIParseable <NSObject>
 
+- (BOOL)isTopLevel;
+
 @end
 
 @interface OIExpr : NSObject <OIParseable>
